@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<conio.h>
+void shell_sort(int a[], int n){
+    int i, j, m, x;
+    for(m=n/2;m>0;m/=2){
+    for(i=m;i<n;i+=1)
+{x = a[i];
+for(j=i;j>=m&&a[j-m]>x;j-=m)
+a[j] = a[j-m];
+a[j] = x; }}}
+int main(){
+    int a[50], size, i;
+    clrscr();
+    printf(" Harjot singh \n");
+    printf("Enter Size of Array:\n ");
+    scanf("%d", &size);
+    printf("Enter Array Elements:\n ");
+    for(i=0;i<size;i++)
+     scanf("%d", &a[i]);
+    shell_sort(a, size);
+    printf("The Sorted Array is :\n");
+    for(i=0;i<size;i++)
+     printf("%d ", a[i]);
+     getch();
+    return 0;  }
